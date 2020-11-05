@@ -1,0 +1,15 @@
+<h1>CALCULATOR</h1>
+<form id="cal-form">
+  <input placeholder="type value one" autofocus type="number" name="val1" id="val1" [(ngModel)]="val1">
+  <input [value]="currentSign" type="text" name="sign" id="sign">
+  <input placeholder="type value one" type="number" name="val2" id="val2" [(ngModel)]="val2">
+  <section class="symbols">
+    <input type="button" value="+" (click)="currentSign='+'; add()">
+    <input type="button" value="-" (click)="currentSign='-'; minus()">
+    <input type="button" value="x" (click)="currentSign='x'; multiply()">
+    <input type="button" value="/" (click)="currentSign='/'; divide()">
+  </section>
+  <input type="number" name="ans" id="ans" [(ngModel)]="ans" disabled>
+</form>
+
+<history></history>
